@@ -1,0 +1,57 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kanavu.messageapp"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:label="messageapp"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <meta-data
+                android:name="48df036eb4efee24fd1bac8ea6251a8fa0caa7f3"
+                android:value="-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC18yZLL3DF1b+B\nBhoUBWPTpV8TPhOJnCfmldtXGo1ROnZH6jxdmAw97hNz69srZEpgJBDwlQvJVwF+\n+wv03hNwZejMupCYlACbw/wvqJJvyVQnr6NtYNGxw+KhTvlPcTwWcL6HzlknKwiM\n1nSqdqs7wJLVqyBCThr71MbvWYIgbNeShHq809ZZluzBlhGeAOhKRwNBcOjWG+kW\nweLqt75fGtydQbbh1LungoGd0mz0IzfyNmFdTIcI0NjxjpJQmFZDHPoy8qYBqUml\nYAg5NaTBe0ttVCg6HLs2CBnqG207W3d35O41DpbCG088UrRT3W+g0Yk1BCjDLBkM\nU/r9Bm6/AgMBAAECggEADQqoKIR2f1+yUdO3o869GIsGdREigl8UhxUfuy8WiQd5\nOe9is0y2N+wsLcdulr4iDKEZK71rMlvPqiPheARA/XH4jVAkFCOrpX6XQW1CTcvv\nAcc3nhvt++FwCaLpANY7edpL9d0HC+UsQDgQ9bT60hYcED+rWMVTbtCSD87pIly7\nrD9IQ430eU4XDN61mOiXMIx92vSNj5qNnrvgpHms3W43mB3x0HVlrVaV6bYe9Rwv\nTx4VzPvb6mlTE12xF2Z4xpmcm5+g7L6nv0oJxqZ3FiVnTjt5vNjxzcQVSodbMzpf\nvZEunRnmOFIPUhdaZsUOB6IJXYdw0Wd1BE/DkG1z4QKBgQD0Hn94A+CJw5OTGrXY\nGYMTjKtxd4iDresQsqHsRjhfDUg1RygRHgGwDfbVS5ZOHDmTMENcEUaQnelWUkfG\ndPCGk5zQ43VJiRGKTrZKtjHPXQH56j5omrZDqHcflApdBs+9H/kNdJlVikokBsTK\n03ZU69KUu8373Dn8af6dsLBpYQKBgQC+zhQUFrNfX5Eo0x0EmC6WQI3lXOQyryWG\nYnZ7+kkvB4n0BdLqACQhKvTrqGuNDRgUWeSVWzEoL5ky2vapI2y6EtPigYhJBcNY\nc3n4VMLVORFJP5Mz0e+1qw4uic24Pg0v+oSDrr7q1ASGSvZUMzy+Z+71zhn0ScLe\nAJkcb60sHwKBgAUeNpHvkt+QiCGHZ9SWBFd+lYGVffk0xj7dX+OyPTBQ+PiU+1QQ\nivyD7m7eXNJaaSKa2m6ttgsGJIQ4yWRxwzEvGxSOEEFwbDu4Fr5OP5EXZBk3PgO3\naqbUe1rgIa99mxFeADy1+xj+AzvqIGoYMNzq7MlNfq4PGfAe0MXBlJFBAoGAdfVp\nLFIsalXmo9qAIgsDIhieoKGg4kStajsNDPBathxvCNFg5xFXRLoN2HKyquzhahN4\n4W0TIsjqaSo9O6uO2Cozm+CApMRPVCtvyDp+iNtS+Hm5Q1wSWbl6dwLyj2itNnAl\n5FLv7LVOZseJKdzTPNN8Q7I7EW9YbW7pOU9BO/kCgYEA8Zdi2u2ZkJlEQGg/ToQd\n/g3yk44tVah0EQMmqdDcNEY0R3iLcv6C+sA5FcuNxlQaBn/uzT3quchVe1oNVP2o\nPjWS3qSbxZvK7XdEBoxS73dvW9lymNYFDsxVET9nq6Q6Qa6ZSN4/8ZkDdKzc2aSZ\nsccDyfSD2IUxeVJrE1tFujE=\n-----END PRIVATE KEY-----\n"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+        <meta-data
+            android:name="com.google.android.gms.auth.api.signin.CLIENT_ID"
+            android:value="YOUR-WEB-CLIENT-ID.apps.googleusercontent.com" />
+
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>
