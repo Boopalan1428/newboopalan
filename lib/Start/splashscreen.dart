@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    print("🟡 SplashScreen started.");
+    print(" SplashScreen started.");
     _navigateToNextScreen(); // Check authentication and navigate
   }
 
@@ -29,13 +29,13 @@ class _SplashScreenState extends State<SplashScreen> {
 
       if (mounted) {
         if (user != null) {
-          print("✅ User is already logged in. Navigating to ChatScreen...");
+          print(" User is already logged in. Navigating to ChatScreen...");
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => ChatScreen()),
           );
         } else {
-          print("🔒 No user found. Navigating to AuthScreen...");
+          print(" No user found. Navigating to AuthScreen...");
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print("🎨 Building SplashScreen UI...");
+    print(" Building SplashScreen UI...");
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Center(
