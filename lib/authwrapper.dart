@@ -10,7 +10,7 @@ class AuthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("🎨 Building AuthScreen UI...");
+    print(" Building AuthScreen UI...");
     return Scaffold(
       appBar: AppBar(title: Text("Login")),
       body: Center(
@@ -21,7 +21,7 @@ class AuthScreen extends StatelessWidget {
               onPressed: () async {
                 final userCredential = await authService.signInWithGoogle();
                 if (userCredential != null) {
-                  print("✅ Google Sign-In Successful");
+                  print(" Google Sign-In Successful");
 
                   // Navigate to ChatScreen on success
                   Navigator.pushReplacement(
@@ -29,7 +29,7 @@ class AuthScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => ChatScreen()),
                   );
                 } else {
-                  print("❌ Google Sign-In Failed");
+                  print(" Google Sign-In Failed");
                 }
               },
               child: Text("Sign in with Google"),
@@ -38,7 +38,7 @@ class AuthScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () async {
                 await authService.signOut();
-                print("✅ Signed out successfully");
+                print(" Signed out successfully");
               },
               child: Text("Sign Out"),
             ),
