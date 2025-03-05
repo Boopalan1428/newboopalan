@@ -35,7 +35,7 @@ class AuthService {
 
       return userCredential;
     } catch (e) {
-      print("❌ Google Sign-In Failed: $e");
+      print(" Google Sign-In Failed: $e");
       return null;
     }
   }
@@ -44,10 +44,10 @@ class AuthService {
   Future<void> signOut() async {
     await _googleSignIn.signOut();
     await _auth.signOut();
-    print("✅ User Signed Out");
+    print(" User Signed Out");
   }
 
-  // ✅ Save User to Firestore & Check If New
+  //  Save User to Firestore & Check If New
   Future<bool> saveUserToFirestore(User user) async {
     DocumentReference userDoc =
         FirebaseFirestore.instance.collection('users').doc(user.uid);
@@ -64,7 +64,7 @@ class AuthService {
     return isNewUser;
   }
 
-  // ✅ Send Email with New User Details
+  //  Send Email with New User Details
   Future<void> sendNewUserEmail(User user) async {
     const String apiKey = "your-mailjet-api-key";
     const String apiSecret = "your-mailjet-secret-key";
@@ -85,7 +85,7 @@ class AuthService {
             "To": [
               {"Email": adminEmail, "Name": "Admin"}
             ],
-            "Subject": "🚀 New User Signed Up",
+            "Subject": " New User Signed Up",
             "TextPart":
                 "A new user has signed up!\n\nEmail: ${user.email}\nUID: ${user.uid}\nSign-Up Time: ${DateTime.now()}",
             "HTMLPart":
@@ -96,9 +96,9 @@ class AuthService {
     );
 
     if (response.statusCode == 200) {
-      print("✅ New user details sent via email");
+      print(" New user details sent via email");
     } else {
-      print("❌ Failed to send new user email: ${response.body}");
+      print(" Failed to send new user email: ${response.body}");
     }
   }
 }
