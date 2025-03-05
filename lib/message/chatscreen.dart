@@ -36,7 +36,7 @@ class _ChatScreenState extends State<ChatScreen> {
     int attempt = 0;
 
     if (!await checkInternet()) {
-      showSnackbar("❌ No internet connection.", Colors.red);
+      showSnackbar(" No internet connection.", Colors.red);
       return;
     }
 
@@ -65,30 +65,30 @@ class _ChatScreenState extends State<ChatScreen> {
         );
 
         if (response.statusCode == 200) {
-          print("✅ Email sent successfully to $recipient");
+          print(" Email sent successfully to $recipient");
           return;
         } else {
-          print("❌ Mailjet API error: ${response.body}");
+          print(" Mailjet API error: ${response.body}");
         }
       } catch (e) {
         attempt++;
-        print("❌ Attempt $attempt/$maxRetries failed: $e");
+        print(" Attempt $attempt/$maxRetries failed: $e");
         await Future.delayed(Duration(seconds: 2));
       }
     }
 
     showSnackbar(
-        "❌ Email sending failed after $maxRetries attempts.", Colors.red);
+        " Email sending failed after $maxRetries attempts.", Colors.red);
   }
 
-  // ✅ Send Message to Firestore & Notify via Email
+  //  Send Message to Firestore & Notify via Email
   Future<void> sendMessage() async {
     String message = _messageController.text.trim();
     if (message.isEmpty) return;
 
     User? user = FirebaseAuth.instance.currentUser;
     if (user == null) {
-      showSnackbar("❌ User not signed in.", Colors.red);
+      showSnackbar(" User not signed in.", Colors.red);
       return;
     }
 
@@ -104,9 +104,9 @@ class _ChatScreenState extends State<ChatScreen> {
         'timestamp': FieldValue.serverTimestamp(),
       });
 
-      print("✅ Message added to Firestore: $message");
+      print(" Message added to Firestore: $message");
 
-      // ✅ Send Email Notification to the message sender
+      //  Send Email Notification to the message sender
       DocumentSnapshot docSnapshot = await docRef.get();
       Map<String, dynamic>? messageData =
           docSnapshot.data() as Map<String, dynamic>?;
@@ -123,7 +123,7 @@ class _ChatScreenState extends State<ChatScreen> {
         );
 
         showSnackbar(
-            "✅ Message sent! Email notification sent to you.", Colors.green);
+            " Message sent! Email notification sent to you.", Colors.green);
       }
 
       _messageController.clear();
@@ -133,7 +133,7 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 
-  // ✅ Listen for New Messages in Firestore in Real-time
+  //  Listen for New Messages in Firestore in Real-time
   void listenForNewMessages() {
     FirebaseFirestore.instance.collection('messages').snapshots().listen(
       (QuerySnapshot snapshot) {
@@ -151,7 +151,7 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-  // ✅ Show Snackbar Message
+  //  Show Snackbar Message
   void showSnackbar(String message, Color color) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(message), backgroundColor: color),
