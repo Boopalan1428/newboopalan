@@ -18,7 +18,7 @@ void main() async {
 
   //  Mailjet API Keys
   String apiKey = 'ce4fb4f08d7cd9946acbd135da6e3c9d';
-  String secretKey = '456858b3b39fbd760963d805248dac03';
+  String secretKey = '6f752a5ab779a7efa1a8d19b660b318a';
 
   //  Check Internet Connectivity with Mailjet API
   try {
