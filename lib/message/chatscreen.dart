@@ -31,7 +31,7 @@ class _ChatScreenState extends State<ChatScreen> {
     const String apiKey =
         "ce4fb4f08d7cd9946acbd135da6e3c9d"; //  Move this to Firebase Functions
     const String apiSecret =
-        "456858b3b39fbd760963d805248dac03"; //  Do not expose API keys!
+        "6f752a5ab779a7efa1a8d19b660b318a"; //  Do not expose API keys!
     const int maxRetries = 3;
     int attempt = 0;
 
